@@ -10,7 +10,6 @@ def find_element(matrix, value):
     
     while right >= left:
         i, j = math.floor(mid/N), mid % N
-        print(value, matrix[i][j], left, mid, right)
         if value > matrix[i][j]:
             left = mid + 1
         elif value < matrix[i][j]:

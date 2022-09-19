@@ -18,7 +18,6 @@ class Tree:
         self.values[self.root.value] = self.root
     
     def track(self, value):
-        print("value", value)
         if value in self.values.keys():
             self.increment(value)
         else:
@@ -64,7 +63,6 @@ class Tree:
         rank = 0
         while curr.value != value:
             if value > curr.value:
-                print(rank, curr.num_left, curr.num_ocurrences)
                 rank += curr.num_left + curr.num_ocurrences
                 curr = curr.right
             else:
@@ -84,4 +82,4 @@ tracker.track(7)
 tracker.track(13)
 tracker.track(3)
 
-print(tracker.get_rank(10))
+print(tracker.get_rank(13))
